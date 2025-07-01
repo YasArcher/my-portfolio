@@ -12,40 +12,16 @@ This is my personal portfolio built with React, TypeScript, and Tailwind CSS. It
 
 ## 📷 Preview
 
-![Portfolio Preview](./public/preview.png)
+![Portfolio dark Preview](./public/preview-dark.png)
+![Portfolio light Preview](./public/preview-light.png)
 
 ## 📦 Local Setup
 
 ```bash
-git clone https://github.com/your-username/my-portafolio.git
+git clone https://github.com/YasArcher/my-portfolio
 cd my-portafolio
 npm install
 npm run dev
-```
-
-## ⚙️ Available Scripts
-
-| Command           | Description                        |
-|------------------|------------------------------------|
-| `npm run dev`     | Start the development server       |
-| `npm run build`   | Create the production build        |
-| `npm run preview` | Preview the production build locally |
-
-## 🗂️ Project Structure
-
-```
-my-portafolio/
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── context/
-│   ├── pages/
-│   ├── hooks/
-│   └── main.tsx
-├── index.html
-├── tailwind.config.js
-└── vite.config.ts
 ```
 
 ## ☁️ Deployment
