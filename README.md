@@ -26,7 +26,7 @@ npm run dev
 
 ## ☁️ Deployment
 
-This site is deployed on [Vercel](https://vercel.com), enabling continuous deployment from the `main` branch.
+This site is deployed on [Vercel](https://my-portfolio-six-gray-69.vercel.app/), enabling continuous deployment from the `main` branch.
 
 ## 📄 License
 

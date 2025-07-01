@@ -395,7 +395,7 @@ const Proyectos = () => {
                         }`}
                       >
                         <FaCode className="text-xs" />
-                        Tecnologías
+                        Technologies
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {proyecto.tecnologias.map((tech, techIndex) => (

@@ -230,7 +230,7 @@ const Presentacion = () => {
               : "0 0 20px rgba(59, 130, 246, 0.5)",
           }}
         >
-          ¡Hi! I am Marlon Masabanda
+          Hi! I'm Marlon Masabanda
         </motion.h1>
 
         {/* Descripción con animación de aparición gradual */}
@@ -255,7 +255,7 @@ const Presentacion = () => {
           >
             backend focus
           </motion.span>
-          , expert in designing{" "}
+          , skilled in designing{" "}
           <motion.span
             className={`font-semibold ${
               theme === 'dark' ? "text-purple-400" : "text-purple-600"
