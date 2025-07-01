@@ -1,69 +1,57 @@
-# React + TypeScript + Vite
+# 🌐 My Portfolio — Marlon Masabanda
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal portfolio built with React, TypeScript, and Tailwind CSS. It showcases my projects, professional experience, certifications, and provides a way to get in touch. It includes smooth animations with Framer Motion and dark mode support.
 
-Currently, two official plugins are available:
+## 🚀 Main Technologies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚛️ React + TypeScript
+- 🎨 Tailwind CSS
+- 🎞️ Framer Motion
+- 🌙 Dark mode with Context API
+- 📁 Deployed on Vercel
 
-## Expanding the ESLint configuration
+## 📷 Preview
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+![Portfolio Preview](./public/preview.png)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Local Setup
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/your-username/my-portafolio.git
+cd my-portafolio
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ⚙️ Available Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Command           | Description                        |
+|------------------|------------------------------------|
+| `npm run dev`     | Start the development server       |
+| `npm run build`   | Create the production build        |
+| `npm run preview` | Preview the production build locally |
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🗂️ Project Structure
+
 ```
+my-portafolio/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── context/
+│   ├── pages/
+│   ├── hooks/
+│   └── main.tsx
+├── index.html
+├── tailwind.config.js
+└── vite.config.ts
+```
+
+## ☁️ Deployment
+
+This site is deployed on [Vercel](https://vercel.com), enabling continuous deployment from the `main` branch.
+
+## 📄 License
+
+MIT © Marlon Masabanda
