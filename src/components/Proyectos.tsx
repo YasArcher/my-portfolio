@@ -117,33 +117,25 @@ const Proyectos = () => {
       case "Web":
         return (
           <FaGlobe
-            className={`${
-              theme === "dark" ? "text-blue-400" : "text-blue-600"
-            }`}
+            className={`${theme === "dark" ? "text-blue-300" : "text-white"}`}
           />
         );
       case "Mobile":
         return (
           <FaMobile
-            className={`${
-              theme === "dark" ? "text-green-400" : "text-emerald-600"
-            }`}
+            className={`${theme === "dark" ? "text-green-300" : "text-white"}`}
           />
         );
       case "Desktop":
         return (
           <FaDesktop
-            className={`${
-              theme === "dark" ? "text-purple-400" : "text-purple-600"
-            }`}
+            className={`${theme === "dark" ? "text-purple-300" : "text-white"}`}
           />
         );
       default:
         return (
           <FaCode
-            className={`${
-              theme === "dark" ? "text-gray-400" : "text-gray-500"
-            }`}
+            className={`${theme === "dark" ? "text-gray-300" : "text-white"}`}
           />
         );
     }
@@ -325,8 +317,6 @@ const Proyectos = () => {
                 layout
                 transition={{ delay: index * 0.1 }}
                 className="group relative"
-                onHoverStart={() => setHoveredProject(index)}
-                onHoverEnd={() => setHoveredProject(null)}
               >
                 <motion.div
                   className={`rounded-2xl shadow-lg overflow-hidden relative backdrop-blur-sm ${
@@ -342,6 +332,8 @@ const Proyectos = () => {
                         : "0 25px 50px -12px rgba(0, 0, 0, 0.15)",
                   }}
                   transition={{ duration: 0.3 }}
+                  onHoverStart={() => setHoveredProject(index)}
+                  onHoverEnd={() => setHoveredProject(null)}
                 >
                   {/* Header de la tarjeta */}
                   <div className="p-6 pb-4">
@@ -422,8 +414,8 @@ const Proyectos = () => {
                     </div>
                   </div>
 
-                  {/* Footer de la tarjeta */}
-                  <div className="px-6 pb-6">
+                  {/* Footer de la tarjeta - SECCIÓN CORREGIDA */}
+                  <div className="px-6 pb-6 relative z-20">
                     <div className="flex items-center justify-between gap-2 flex-wrap">
                       <div className="flex gap-2">
                         {proyecto.enlaceFront && (
@@ -431,13 +423,23 @@ const Proyectos = () => {
                             href={proyecto.enlaceFront}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`inline-flex items-center gap-2 px-3 py-2 font-semibold rounded-lg shadow text-sm transition-colors duration-300 ${
+                            className={`inline-flex items-center gap-2 px-3 py-2 font-semibold rounded-lg shadow text-sm transition-colors duration-300 relative z-30 cursor-pointer ${
                               theme === "dark"
                                 ? "bg-blue-600 hover:bg-blue-500 text-white"
                                 : "bg-blue-600 hover:bg-blue-700 text-white"
                             }`}
+                            style={{ pointerEvents: "auto" }}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
+                            onMouseEnter={(e: React.MouseEvent) =>
+                              e.stopPropagation()
+                            }
+                            onMouseLeave={(e: React.MouseEvent) =>
+                              e.stopPropagation()
+                            }
+                            onClick={(e: React.MouseEvent) =>
+                              e.stopPropagation()
+                            }
                           >
                             <FaEye className="text-xs" />
                             Frontend
@@ -449,13 +451,23 @@ const Proyectos = () => {
                             href={proyecto.enlaceBack}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`inline-flex items-center gap-2 px-3 py-2 font-semibold rounded-lg shadow text-sm transition-colors duration-300 ${
+                            className={`inline-flex items-center gap-2 px-3 py-2 font-semibold rounded-lg shadow text-sm transition-colors duration-300 relative z-30 cursor-pointer ${
                               theme === "dark"
                                 ? "bg-purple-600 hover:bg-purple-500 text-white"
                                 : "bg-purple-600 hover:bg-purple-700 text-white"
                             }`}
+                            style={{ pointerEvents: "auto" }}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
+                            onMouseEnter={(e: React.MouseEvent) =>
+                              e.stopPropagation()
+                            }
+                            onMouseLeave={(e: React.MouseEvent) =>
+                              e.stopPropagation()
+                            }
+                            onClick={(e: React.MouseEvent) =>
+                              e.stopPropagation()
+                            }
                           >
                             <FaEye className="text-xs" />
                             Backend
@@ -471,16 +483,16 @@ const Proyectos = () => {
                             }`}
                           >
                             <FaCode className="text-xs" />
-                            En desarrollo
+                            Developing
                           </span>
                         )}
                       </div>
                     </div>
                   </div>
 
-                  {/* Efecto de brillo al hover */}
+                  {/* Efecto de brillo al hover - NO INTERFIERE */}
                   <motion.div
-                    className={`absolute inset-0 bg-gradient-to-r from-transparent to-transparent -translate-x-full ${
+                    className={`absolute inset-0 bg-gradient-to-r from-transparent to-transparent -translate-x-full pointer-events-none ${
                       theme === "dark" ? "via-blue-400/10" : "via-white/10"
                     }`}
                     animate={
@@ -491,7 +503,7 @@ const Proyectos = () => {
 
                   {/* Indicador de hover */}
                   <motion.div
-                    className={`absolute top-4 right-4 w-2 h-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity ${
+                    className={`absolute top-4 right-4 w-2 h-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none ${
                       theme === "dark" ? "bg-blue-400" : "bg-blue-500"
                     }`}
                     animate={

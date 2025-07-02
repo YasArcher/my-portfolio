@@ -192,7 +192,7 @@ const Certificaciones = () => {
                         <img
                           src={cert.imagen}
                           alt={cert.titulo}
-                          className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                          className="w-full h-70 object-cover group-hover:scale-110 transition-transform duration-500"
                           style={{
                             filter:
                               theme === "dark"
@@ -251,7 +251,7 @@ const Certificaciones = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                           >
-                            <span>Ver certificado</span>
+                            <span>View certificate</span>
                             <FaExternalLinkAlt className="text-sm group-hover/link:translate-x-1 transition-transform duration-300" />
                           </motion.a>
                         )}

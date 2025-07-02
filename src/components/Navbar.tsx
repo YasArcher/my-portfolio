@@ -244,7 +244,7 @@ const Navbar = () => {
 
               {/* CTA Button */}
               <motion.a
-                href="/CV_Marlon.pdf"
+                href="/CVMARLON.pdf"
                 download
                 className="relative inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full shadow-lg overflow-hidden group"
                 whileHover={{
