@@ -348,7 +348,7 @@ const Navbar = () => {
               }`}
             >
               <motion.a
-                href="/CV_Marlon.pdf"
+                href="/CVMARLON.pdf"
                 download
                 className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg shadow-lg"
                 whileHover={{ scale: 1.02 }}
