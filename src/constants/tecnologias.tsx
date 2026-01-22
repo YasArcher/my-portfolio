@@ -22,7 +22,7 @@ export const tecnologias: Tecnologia[] = [
   { nombre: "TypeScript", icono: <SiTypescript className="text-blue-600" /> },
   { nombre: "TailwindCSS", icono: <SiTailwindcss className="text-teal-500" /> },
   { nombre: "Node.js", icono: <FaNodeJs className="text-green-600" /> },
-  { nombre: ".NET CORE", icono: <SiDotnet className="text-purple-700" /> },
+  { nombre: ".NET", icono: <SiDotnet className="text-purple-700" /> },
   // Custom Blazor icon, el tamaño y color se ajustan en el componente
   {
     nombre: "Blazor",

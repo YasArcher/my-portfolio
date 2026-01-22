@@ -273,7 +273,7 @@ const SobreMi = () => {
                           : "text-purple-700 bg-purple-50"
                       }`}
                     >
-                      .NET CORE
+                      .NET
                     </span>
                     ,{" "}
                     <span
@@ -321,7 +321,7 @@ const SobreMi = () => {
                     >
                       🎓 Thesis Project:
                     </span>{" "}
-                    I'm developing my research at{" "}
+                    I successfully completed my research at{" "}
                     <strong
                       className={
                         theme === "dark" ? "text-indigo-400" : "text-indigo-700"
@@ -360,7 +360,7 @@ const SobreMi = () => {
                     >
                       SQL Server
                     </span>{" "}
-                    y{" "}
+                    and{" "}
                     <span
                       className={`font-semibold px-2 py-1 rounded-lg ${
                         theme === "dark"

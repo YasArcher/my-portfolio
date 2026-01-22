@@ -8,6 +8,7 @@ import {
   FaRocket,
   FaEye,
   FaDesktop,
+  FaLock,
 } from "react-icons/fa";
 import { proyectosData } from "../constants/proyectos";
 import { useTheme } from "../context/ThemeContext";
@@ -21,7 +22,7 @@ const Proyectos = () => {
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
   const proyectosFiltrados = proyectosData.filter((proy) =>
-    filtro === "Todos" ? true : proy.tipo === filtro
+    filtro === "Todos" ? true : proy.tipo === filtro,
   );
 
   const categories = [
@@ -263,8 +264,8 @@ const Proyectos = () => {
                   filtro === categoria.id
                     ? "text-white shadow-lg scale-105"
                     : theme === "dark"
-                    ? "text-gray-100 bg-gray-800/80 backdrop-blur-sm shadow-md hover:shadow-lg border border-gray-700/50"
-                    : "text-gray-700 bg-white/80 backdrop-blur-sm shadow-md hover:shadow-lg border border-white/50"
+                      ? "text-gray-100 bg-gray-800/80 backdrop-blur-sm shadow-md hover:shadow-lg border border-gray-700/50"
+                      : "text-gray-700 bg-white/80 backdrop-blur-sm shadow-md hover:shadow-lg border border-white/50"
                 }`}
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
@@ -340,7 +341,7 @@ const Proyectos = () => {
                     <div className="flex items-start justify-between mb-4">
                       <motion.div
                         className={`w-12 h-12 bg-gradient-to-r ${getTypeColor(
-                          proyecto.tipo
+                          proyecto.tipo,
                         )} rounded-xl flex items-center justify-center shadow-lg`}
                         whileHover={{ scale: 1.1, rotate: 5 }}
                       >
@@ -349,7 +350,7 @@ const Proyectos = () => {
 
                       <motion.div
                         className={`px-3 py-1 bg-gradient-to-r ${getTypeColor(
-                          proyecto.tipo
+                          proyecto.tipo,
                         )} text-white text-xs font-semibold rounded-full`}
                         whileHover={{ scale: 1.05 }}
                       >
@@ -474,7 +475,18 @@ const Proyectos = () => {
                             <FaExternalLinkAlt className="text-xs" />
                           </motion.a>
                         )}
-                        {!proyecto.enlaceFront && !proyecto.enlaceBack && (
+                        {proyecto.isPrivate ? (
+                          <span
+                            className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm ${
+                              theme === "dark"
+                                ? "bg-amber-900/30 text-amber-400 border border-amber-700"
+                                : "bg-amber-50 text-amber-700 border border-amber-200"
+                            }`}
+                          >
+                            <FaLock className="text-xs" />
+                            Private
+                          </span>
+                        ) : !proyecto.enlaceFront && !proyecto.enlaceBack ? (
                           <span
                             className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm ${
                               theme === "dark"
@@ -485,7 +497,7 @@ const Proyectos = () => {
                             <FaCode className="text-xs" />
                             Developing
                           </span>
-                        )}
+                        ) : null}
                       </div>
                     </div>
                   </div>

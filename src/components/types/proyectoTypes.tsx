@@ -6,4 +6,5 @@ export type Proyecto = {
   tecnologias: string[]
   enlaceFront?: string
   enlaceBack?: string
+  isPrivate?: boolean
 }
